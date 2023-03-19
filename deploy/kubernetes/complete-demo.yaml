@@ -92,6 +92,13 @@ spec:
       containers:
       - name: carts-db
         image: mongo
+        resources:
+          limits:
+            cpu: 300m
+            memory: 500Mi
+          requests:
+            cpu: 100m
+            memory: 200Mi
         ports:
         - name: mongo
           containerPort: 27017
@@ -222,6 +229,13 @@ spec:
       containers:
       - name: catalogue-db
         image: weaveworksdemos/catalogue-db:0.3.0
+        resources:
+          limits:
+            cpu: 300m
+            memory: 500Mi
+          requests:
+            cpu: 100m
+            memory: 200Mi
         env:
           - name: MYSQL_ROOT_PASSWORD
             value: fake_password
@@ -406,6 +420,13 @@ spec:
       containers:
       - name: orders-db
         image: mongo
+        resources:
+          limits:
+            cpu: 300m
+            memory: 500Mi
+          requests:
+            cpu: 100m
+            memory: 200Mi
         ports:
         - name: mongo
           containerPort: 27017
@@ -587,6 +608,13 @@ spec:
       containers:
       - name: rabbitmq
         image: rabbitmq:3.6.8-management
+        resources:
+          limits:
+            cpu: 300m
+            memory: 500Mi
+          requests:
+            cpu: 100m
+            memory: 200Mi
         ports:
         - containerPort: 15672
           name: management
@@ -655,6 +683,13 @@ spec:
       containers:
       - name: session-db
         image: redis:alpine
+        resources:
+          limits:
+            cpu: 300m
+            memory: 500Mi
+          requests:
+            cpu: 100m
+            memory: 200Mi
         ports:
         - name: redis
           containerPort: 6379
@@ -850,7 +885,13 @@ spec:
       containers:
       - name: user-db
         image: weaveworksdemos/user-db:0.3.0
-
+        resources:
+          limits:
+            cpu: 300m
+            memory: 500Mi
+          requests:
+            cpu: 100m
+            memory: 200Mi
         ports:
         - name: mongo
           containerPort: 27017

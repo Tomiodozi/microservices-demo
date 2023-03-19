@@ -1,31 +1,28 @@
-[![Build Status](https://travis-ci.org/microservices-demo/microservices-demo.svg?branch=master)](https://travis-ci.org/microservices-demo/microservices-demo)
+# Microservices-demo # 
 
-# Sock Shop : A Microservice Demo Application
+## This is a clone of the sock-shop app and my mini-app. ##
 
-The application is the user-facing part of an online shop that sells socks. It is intended to aid the demonstration and testing of microservice and cloud native technologies.
+*git clone https://microservices-demo.github.io/
 
-It is built using [Spring Boot](http://projects.spring.io/spring-boot/), [Go kit](http://gokit.io) and [Node.js](https://nodejs.org/) and is packaged in Docker containers.
+*cd into microservices-demo
 
-You can read more about the [application design](./internal-docs/design.md).
+*chmod +x ./commands.sh
 
-## Deployment Platforms
+*Run the script ./command.sh to get the containers running, check to see if the containers are running.
 
-The [deploy folder](./deploy/) contains scripts and instructions to provision the application onto your favourite platform. 
+*Once the containers are up, run minkube IP, to get cluster IP.
 
-Please let us know if there is a platform that you would like to see supported.
+*The minikube IP is the local host for browser.
+ minikube IP:30001 is the IP to access the Frontend sockshop
 
-## Bugs, Feature Requests and Contributing
+*Attach these node ports to view the respective services.
 
-We'd love to see community contributions. We like to keep it simple and use Github issues to track bugs and feature requests and pull requests to manage contributions. See the [contribution information](.github/CONTRIBUTING.md) for more information.
+1. Prometheus 31090
 
-## Screenshot
+2. Grafana 31300
 
-![Sock Shop frontend](https://github.com/microservices-demo/microservices-demo.github.io/raw/master/assets/sockshop-frontend.png)
+3. Mongo-express 32220
 
-## Visualizing the application
+4. Mini-app 31105
 
-Use [Weave Scope](http://weave.works/products/weave-scope/) or [Weave Cloud](http://cloud.weave.works/) to visualize the application once it's running in the selected [target platform](./deploy/).
 
-![Sock Shop in Weave Scope](https://github.com/microservices-demo/microservices-demo.github.io/raw/master/assets/sockshop-scope.png)
-
-## 
